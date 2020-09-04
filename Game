@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
+int main(void) {
+
+int resp, x=0, tent=0;
+
+printf("******GUESS THE NUMBER******\n\n");
+printf("Instructions: Guess the number (1 to 1000) Keep typing and I`ll say if your number is bigger or smaller than the answer! Good luck ;3\n\n");
+
+srand( time(NULL) );
+{
+x=rand() % 1000;
+//printf("Numero %d \n", x);
+}
+
+do{
+
+printf("Type the number:\n");
+scanf("%d", &resp);
+
+if(resp>x){
+printf("Your number are bigger!\n");
+}
+else if (resp<x)
+{
+printf("Your number are smaller!\n");
+}
+++tent;
+
+}while(resp!=x);
+
+
+if(tent==1){
+printf("YOU`RE THE MAGE MASTER\n");  
+}
+else if(tent>1 && tent<=5){
+printf("NICE!\n");  
+}
+else if(tent>5 && tent<=10){
+printf("TOP 10\n");
+}
+else if(tent>10 && tent<=20){
+printf("Hum....you´re good, I guess haha\n");  
+}
+else if(tent>20){
+printf("Man....You´re little bad...sorry\n");
+}
+
+printf("Congratulations! You did it in %d questions! :D", tent);
+
+
+  return 0;
+}
