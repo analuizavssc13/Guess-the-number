@@ -20,11 +20,11 @@ printf("Type the number:\n");
 scanf("%d", &resp);
 
 if(resp>x){
-printf("Your number are bigger!\n");
+printf("Your number is bigger!\n");
 }
 else if (resp<x)
 {
-printf("Your number are smaller!\n");
+printf("Your number is smaller!\n");
 }
 ++tent;
 
